@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import PizzaList from '../PizzaList/PizzaList';
+import Home from '../Home/Home';
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
         </Route>
 
         <Route path="/" exact>
-          {/* <Home /> */}
+          <Home />
         </Route>
 
         <Route path="/selectPizza">
@@ -49,9 +50,6 @@ function App() {
         </Route>
 
       </Router>
-
-      <img src='images/pizza_photo.png' />
-      <p>Pizza is great.</p>
 
     </div>
   );
