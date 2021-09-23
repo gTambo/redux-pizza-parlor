@@ -8,8 +8,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 
-// create CustomerInfo reducer 
-
+// create CustomerInfo reducer (ADDED BY MO THURSDAY EVENING)
+const customerInfo = (state = [], action) => {
+    if(action.type === "ADD_NEW_CUSTOMER") {
+        return [action.payload, ...state]; //reversed so most recent appears first
+    }
+    return state;
+}
+// end code added by Mo thursday evening
 
 
 
@@ -44,6 +50,7 @@ const pizzaList = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         pizzaList,
+        customerInfo, //added by Mo Thursday evening
     }),
     applyMiddleware(logger)
 );
