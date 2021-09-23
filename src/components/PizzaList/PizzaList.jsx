@@ -15,7 +15,7 @@ function PizzaList () {
         }).then(response => {
             console.log('Pizza data: ', response.data);
             dispatch({
-                method: 'SET_PIZZA_LIST',
+                type: 'SET_PIZZA_LIST',
                 payload: response.data,
                 });
             }).catch((err) => {
