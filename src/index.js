@@ -49,7 +49,7 @@ const storeInstance = createStore(
 );
 
 ReactDOM.render(
-    <Provider> 
+    <Provider store={storeInstance}>
         <App />
     </Provider>, 
 document.getElementById('root'));
