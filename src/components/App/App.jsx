@@ -17,19 +17,19 @@ function App() {
       </header>
       <Router>
 
-        <Route>
+        <Route path="/customerInfo">
           <CustomerInfo />
         </Route>
 
-        <Route>
+        <Route path="/checkout">
           <Checkout />
         </Route>
 
-        <Route>
+        <Route path="/" exact>
           <SelectPizza />
         </Route>
 
-        <Route>
+        <Route path="/admin">
           <Admin />
         </Route>
 
