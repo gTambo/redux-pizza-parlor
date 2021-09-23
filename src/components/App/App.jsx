@@ -28,23 +28,23 @@ function App() {
         </ul>
 
         <Route path="/customerInfo">
-          <CustomerInfo />
+          {/* <CustomerInfo /> */}
         </Route>
 
         <Route path="/checkout">
-          <Checkout />
+          {/* <Checkout /> */}
         </Route>
 
         <Route path="/" exact>
-          <Home />
+          {/* <Home /> */}
         </Route>
 
         <Route path="selectPizza">
-          <SelectPizza />
+          {/* <SelectPizza /> */}
         </Route>
 
         <Route path="/admin">
-          <Admin />
+          {/* <Admin /> */}
         </Route>
 
       </Router>
