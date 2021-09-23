@@ -10,9 +10,17 @@ function PizzaList () {
 
     const fetchPizzaList = ( { pizza } ) => {
         axios({
-            method: '
-            payload: 
-        })
+            method: 'GET',
+            url: '/api/pizza',
+        }).then(response => {
+            console.log('Pizza data: ', response.data);
+            dispatch({
+                method: 'SET_PIZZA_LIST',
+                payload: response.data,
+            }).catch((err) => {
+                console.log('Error', err);
+              });
+        });
     }
 
     useEffect( () => {
