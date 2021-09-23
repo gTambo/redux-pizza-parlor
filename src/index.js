@@ -15,7 +15,12 @@ import logger from 'redux-logger';
 
 
 // create PizzaList reducer 
-const pizzaList
+const pizzaList = (state = [], action) => {
+    if (action.type === 'SET_PIZZA_LIST') {
+        return action.payload;
+    }
+    return state;
+}
 
 
 
@@ -38,7 +43,7 @@ const pizzaList
 // create store
 const storeInstance = createStore(
     combineReducers({
-
+        pizzaList,
     }),
     applyMiddleware(logger)
 );
