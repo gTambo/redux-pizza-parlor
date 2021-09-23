@@ -15,7 +15,7 @@ import logger from 'redux-logger';
 
 
 // create PizzaList reducer 
-
+const pizzaList
 
 
 

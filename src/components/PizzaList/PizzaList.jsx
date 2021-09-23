@@ -8,7 +8,7 @@ function PizzaList () {
     const pizzaList = useSelector(store => store.pizzaList);
     const dispatch = useDispatch();
 
-    const fetchPizzaList = ( { pizza } ) => {
+    const fetchPizzaList = () => {
         axios({
             method: 'GET',
             url: '/api/pizza',
@@ -17,9 +17,9 @@ function PizzaList () {
             dispatch({
                 method: 'SET_PIZZA_LIST',
                 payload: response.data,
+                });
             }).catch((err) => {
                 console.log('Error', err);
-              });
         });
     }
 
@@ -31,7 +31,7 @@ function PizzaList () {
         <div className="pizza-display">
             <h2>Step 1: Select Your Pizza</h2>
             <ul>
-                {pizzaList.map( (pizza, index) => <li key={index}><PizzaListItem pizza={pizza} /></li>)}
+                {pizzaList.map( (pizza, index) => <li key={pizza.id}><PizzaListItem pizza={pizza} index={index} /></li>)}
             </ul>
         </div>
     )
