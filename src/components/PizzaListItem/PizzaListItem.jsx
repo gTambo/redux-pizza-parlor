@@ -6,7 +6,7 @@ import React from 'react';
 function PizzaListItem({ pizza }) {
     return (
         <div className="container">
-            <li key={index}>
+            <li key={pizza.id}>
                 <img width="200px" height="200px" src={pizza.image_path} />
                 {pizza.name} -
                 {pizza.description} -
