@@ -31,7 +31,7 @@ function PizzaList () {
         <div className="pizza-display">
             <h2>Step 1: Select Your Pizza</h2>
             <ul>
-                {pizzaList.map( (pizza, index) => <li key={pizza.id}><PizzaListItem pizza={pizza} index={index} /></li>)}
+                {pizzaList.map( (pizza, index) => <PizzaListItem key={pizza.id} pizza={pizza} index={index} />)}
             </ul>
         </div>
     )
