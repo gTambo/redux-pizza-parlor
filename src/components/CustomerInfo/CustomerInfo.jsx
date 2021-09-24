@@ -1,10 +1,16 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 function CustomerInfo() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const sendToCheckout = () => {
+        history.push('/checkout');
+    }
 
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -65,8 +71,9 @@ function CustomerInfo() {
                         onChange={(event) => setZip(event.target.value)}
                     /> <br /> <br />
                 </div>
+                <br />
 
-                Is this order for <b>delivery</b> or <b>pickup</b>?
+                Is this order for <b>delivery</b> or <b>pickup</b>?<br /><br />
 
                 <div>
                     <label>
@@ -92,15 +99,22 @@ function CustomerInfo() {
                         Pickup
                     </label>
                 </div>
-
-
+                <br />
                 <button type="submit">
                     Submit
                 </button>
             </form>
 
+            <h2>Cart Total:</h2>
 
+            <h3>$</h3>
             {/* CART TOTAL GOES HERE  */}
+
+            <br />
+            <button onClick={sendToCheckout}>Go To Checkout</button>
+
+
+
 
         </div>
     )
