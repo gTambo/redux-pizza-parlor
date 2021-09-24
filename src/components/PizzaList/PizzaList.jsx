@@ -47,7 +47,6 @@ function PizzaList () {
             {/* NO. 1 */}
             <button onClick={customerInfo}>Next</button>
         </div>
-        {/* TODO: add next button using history.push */}
         </>
     )
 }
