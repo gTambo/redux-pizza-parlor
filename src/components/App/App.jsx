@@ -14,7 +14,7 @@ function App() {
     <div className='App'>
       <Header />
       <Router>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -27,7 +27,7 @@ function App() {
           <li>
             <Link to="/selectPizza">Select Pizza</Link>
           </li>
-        </ul>
+        </ul> */}
 
         <Route path="/customerInfo">
           {/* <CustomerInfo /> */}
