@@ -1,7 +1,7 @@
 import './PizzaList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import PizzaListItem from '../PizzaListItem/PizzaListItem';
-// import CartTotal from '../CartTotal/CartTotal'
+// import CartTotal from '../CartTotal/CartTotal' // for when we make the cart total
 import { useEffect } from 'react';
 import axios from 'axios';
 // NO. 2
@@ -38,7 +38,7 @@ function PizzaList () {
 
     return (
         <>
-        {/* <CartTotal /> */}
+        {/* <CartTotal /> */} 
         <div className="pizza-display">
             <h2>Step 1: Select Your Pizza</h2>
             <ul>

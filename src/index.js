@@ -61,11 +61,8 @@ const addToCart = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         pizzaList,
-<<<<<<< HEAD
-        addToCart,
-=======
         customerInfo, //added by Mo Thursday evening
->>>>>>> master
+        addToCart, // added by Greg fri morn
     }),
     applyMiddleware(logger)
 );
