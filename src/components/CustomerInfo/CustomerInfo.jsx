@@ -59,6 +59,7 @@ function CustomerInfo() {
 
                     <input
                         required
+                        type="number"
                         placeholder="Zip"
                         value={zip}
                         onChange={(event) => setZip(event.target.value)}
