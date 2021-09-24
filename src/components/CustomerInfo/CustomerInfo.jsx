@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 // NO. 2
-import TotalItem from '../TotalItem/TotalItem';
+import CartTotal from '../CartTotal/CartTotal';
 
 
 function CustomerInfo() {
@@ -108,11 +108,10 @@ function CustomerInfo() {
             </form>
 
             <h2>Cart Total:</h2>
-
-            <h3>$</h3>
-            {/* NOTES: CART TOTAL GOES HERE  */}
+            
             {/* NO. 2 */}
-            <TotalItem />
+            <h3>$</h3><CartTotal />
+            
 
             <br />
             <button onClick={sendToCheckout}>Go To Checkout</button>
