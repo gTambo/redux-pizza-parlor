@@ -1,3 +1,27 @@
 .pizza-display {
-    float: left;
 }
+
+li { 
+    float: left;
+    list-style: inside;
+    list-style-type: none;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: .8em;
+    width: 220px;
+    height: 400px;
+    margin: 5px;
+
+}
+
+img {
+    padding-top: 6px;
+}
+
+.next-button {
+    
+  }
+
+
+
+

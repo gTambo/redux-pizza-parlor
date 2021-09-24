@@ -44,8 +44,8 @@ function PizzaList () {
             <ul>
                 {pizzaList.map( (pizza, index) => <PizzaListItem key={pizza.id} pizza={pizza} index={index} />)}
             </ul>
-            {/* NO. 1 */}
-            <button onClick={customerInfo}>Next</button>
+            {/* NO. 1 */}<br />< br />
+            <button className="next-button" onClick={customerInfo}>Next</button>
         </div>
         </>
     )

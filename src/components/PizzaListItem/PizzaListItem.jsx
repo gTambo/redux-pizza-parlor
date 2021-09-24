@@ -35,16 +35,16 @@ function PizzaListItem({ pizza }) {
             {pizzaPicked ? (
                 <li key={pizza.id}>
                 <img width="200px" height="200px" src={pizza.image_path} />
-                {pizza.name} -
-                {pizza.description} -
+                {pizza.name}
+                {pizza.description}
                 {pizza.price}
                 <button onClick={ () => handleRemove(pizza.id) }>Remove</button>
             </li>
             ) : ( <li key={pizza.id}>
-                <img width="200px" height="200px" src={pizza.image_path} />
-                {pizza.name} -
-                {pizza.description} -
-                {pizza.price}
+                <img width="200px" height="200px" src={pizza.image_path} /><br /><br />
+                {pizza.name} -<br />
+                {pizza.description} -<br />
+                <b>${pizza.price}</b><br /><br />
                 <button onClick={ () => addPizza() }>Add</button>
             </li>)}
             {/* TODO: Remove these Lines */}
