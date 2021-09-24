@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import PizzaList from '../PizzaList/PizzaList';
+import CustomerInfo from '../CustomerInfo/CustomerInfo';
 
 
 function App() {
@@ -29,11 +30,11 @@ function App() {
         </ul>
 
         <Route path="/customerInfo">
-          {/* <CustomerInfo /> */}
+          <CustomerInfo /> 
         </Route>
 
         <Route path="/checkout">
-          {/* <Checkout /> */}
+          {/* <Checkout />
         </Route>
 
         <Route path="/" exact>
