@@ -37,6 +37,7 @@ function PizzaList () {
                 {pizzaList.map( (pizza, index) => <PizzaListItem key={pizza.id} pizza={pizza} index={index} />)}
             </ul>
         </div>
+        {/* TODO: add next button using history.push */}
         </>
     )
 }
