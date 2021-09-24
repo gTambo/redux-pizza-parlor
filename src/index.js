@@ -32,7 +32,12 @@ const pizzaList = (state = [], action) => {
 
 
 // create CartTotal reducer
-
+// const CartTotal = (state = [], action) => {
+//     if (action.type === 'TOTAL_ALL_ITEMS') {
+//         return action.payload;
+//     }
+//     return state;
+// }
 
 
 
@@ -47,6 +52,8 @@ const addToCart = (state = [], action) => {
                 return [...state].filter(item => item.id != action.payload);
             }
         }
+    } else if (action.type === 'TOTAL_CART') {
+        return action.payload;
     }
     return state;
 }
