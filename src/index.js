@@ -32,7 +32,12 @@ const pizzaList = (state = [], action) => {
 
 
 // create CartTotal reducer
-
+const CartTotal = (state = [], action) => {
+    if (action.type === 'TOTAL_ALL_ITEMS') {
+        return action.payload;
+    }
+    return state;
+}
 
 
 
