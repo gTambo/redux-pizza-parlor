@@ -4,7 +4,7 @@ function Home() {
 
     const history = useHistory();
 
-    const selectPizza = () => {
+    const orderPizza = () => {
         console.log('select the pizza');
         history.push('/selectPizza')
     }
@@ -13,7 +13,7 @@ function Home() {
         <>
             <img src='images/pizza_photo.png' />
             <p>Pizza is great.</p>
-            <button onClick={selectPizza}>Select Pizza</button>
+            <button onClick={orderPizza}>Order Pizza</button>
         </>
     )
 }
