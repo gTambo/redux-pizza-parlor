@@ -6,12 +6,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function PizzaListItem({ pizza }) {
     const [pizzaPicked, setPizzaPicked] = useState(false);
-
-    const addToCart = useSelector(store => store.addToCart);
+    // const [showCart, setShowCart] = useState(false); // currently, not needed
+    // const addToCart = useSelector(store => store.addToCart); // not needed, currently
     const lasagna = useDispatch();
 
     const addPizza = () => {
-        console.log('Pizza selected: ', pizza.name);
+        console.log('Item selected: ', pizza.name);
+        setPizzaPicked(true);
         const action = {
             type: 'ADD_TO_CART',
             payload: pizza,
@@ -19,21 +20,36 @@ function PizzaListItem({ pizza }) {
         lasagna(action);
     }
     const handleRemove = (pizzaId) => {
-        console.log();
+        console.log('Item to remove: ', pizza.name, 'id:', pizzaId);
+        setPizzaPicked(false);
         const action = {
             type: 'REMOVE_FROM_CART',
             payload: pizzaId,
         }
+        lasagna(action);
     }
+
 
     return (
         <div className="container">
-            (<li key={pizza.id}>
+            {pizzaPicked ? (
+                <li key={pizza.id}>
                 <img width="200px" height="200px" src={pizza.image_path} />
                 {pizza.name} -
                 {pizza.description} -
                 {pizza.price}
-            </li>)
+                <button onClick={ () => handleRemove(pizza.id) }>Remove</button>
+            </li>
+            ) : ( <li key={pizza.id}>
+                <img width="200px" height="200px" src={pizza.image_path} />
+                {pizza.name} -
+                {pizza.description} -
+                {pizza.price}
+                <button onClick={ () => addPizza() }>Add</button>
+            </li>)}
+            {/* TODO: Remove these Lines */}
+            {/* <button onClick={ () => setShowCart(!showCart)}>ShowCart</button>
+            {showCart ? (<ul>{addToCart.map( (item, i) => <li key={i}>{item.name}</li>)}</ul>) : (<p>Cart Empty</p>)} */}
         </div>
     )
 }

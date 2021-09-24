@@ -1,6 +1,7 @@
 import './PizzaList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import PizzaListItem from '../PizzaListItem/PizzaListItem';
+import CartTotal from '../CartTotal/CartTotal'
 import { useEffect } from 'react';
 import axios from 'axios';
 
@@ -28,12 +29,15 @@ function PizzaList () {
     }, []);
 
     return (
+        <>
+        <CartTotal />
         <div className="pizza-display">
             <h2>Step 1: Select Your Pizza</h2>
             <ul>
                 {pizzaList.map( (pizza, index) => <PizzaListItem key={pizza.id} pizza={pizza} index={index} />)}
             </ul>
         </div>
+        </>
     )
 }
 
