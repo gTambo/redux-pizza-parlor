@@ -4,10 +4,18 @@ import PizzaListItem from '../PizzaListItem/PizzaListItem';
 // import CartTotal from '../CartTotal/CartTotal'
 import { useEffect } from 'react';
 import axios from 'axios';
+// NO. 2
+import { useHistory } from 'react-router-dom';
 
 function PizzaList () {
     const pizzaList = useSelector(store => store.pizzaList);
     const dispatch = useDispatch();
+    // NO. 3
+    const history = useHistory();
+    // NO. 4
+    const customerInfo = () => {
+        history.push('/customerInfo');
+    }
 
     const fetchPizzaList = () => {
         axios({
@@ -36,6 +44,8 @@ function PizzaList () {
             <ul>
                 {pizzaList.map( (pizza, index) => <PizzaListItem key={pizza.id} pizza={pizza} index={index} />)}
             </ul>
+            {/* NO. 1 */}
+            <button onClick={customerInfo}>Next</button>
         </div>
         {/* TODO: add next button using history.push */}
         </>
